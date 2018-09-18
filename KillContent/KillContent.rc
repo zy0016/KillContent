@@ -1,0 +1,501 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Simplified, PRC) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\KillContent.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\KillContent.ico"
+IDI_ICON_KILL           ICON                    "res\\Kill.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "注释杀手"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,10,20,20
+    LTEXT           "注释杀手 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2005年8月 赵勇,平颖洁",IDC_STATIC,40,25,181,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_KILLCONTENT_DIALOG DIALOGEX 0, 0, 472, 447
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "注释杀手"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "关闭",IDC_BUTTON_CLOSE,420,425,45,15
+    PUSHBUTTON      "选项...",IDC_BUTTON_OPTION,372,425,45,15
+END
+
+IDD_DIALOG_FILE DIALOG 0, 0, 458, 359
+STYLE DS_SETFONT | WS_CHILD | WS_CAPTION
+CAPTION "按文件操作"
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "选择需要操作的文件",IDC_STATIC_CLEWBOX,5,5,450,350
+    CONTROL         "List1",IDC_LIST_FILE,"SysListView32",LVS_REPORT | LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,10,36,440,313
+    LTEXT           "请将需要删除注释的文件加入到当前列表框中,选择“开始删除”按钮.",IDC_STATIC_FILECLEW,10,18,271,10
+    PUSHBUTTON      "预览代码",IDC_BUTTON_PREVIEW,355,15,45,16
+    PUSHBUTTON      "开始删除",IDC_BUTTON_DELETE,405,15,45,16
+END
+
+IDD_DIALOG_FOLD DIALOG 0, 0, 458, 359
+STYLE DS_SETFONT | WS_CHILD | WS_CAPTION
+CAPTION "按目录操作"
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "选择需要操作的目录",IDC_STATIC_FOLDCLEWBOX,5,5,450,350
+    LTEXT           "请将需要删除注释的目录加入到当前列表框中,选择“开始删除”按钮.",IDC_STATIC_CLEWFOLD,10,18,255,10
+    CONTROL         "List1",IDC_LIST_FOLD,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,10,36,440,314
+    PUSHBUTTON      "开始删除",IDC_BUTTON_DELETEFOLD,405,15,45,16
+END
+
+IDD_DIALOG_ADD_EDITFILE DIALOGEX 0, 0, 307, 85
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,198,60,50,14
+    PUSHBUTTON      "取消",IDCANCEL,253,60,50,14
+    LTEXT           "选择源文件:",IDC_STATIC_SOUR,10,12,50,10
+    LTEXT           "选择输出文件:",IDC_STATIC_DES,10,37,55,8
+    COMBOBOX        IDC_COMBO_SOUR,65,10,215,88,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_DES,65,35,215,116,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "...",IDC_BUTTON_SOURFILE,283,10,20,13
+    PUSHBUTTON      "...",IDC_BUTTON_DESFILE,283,35,20,13
+END
+
+IDD_DIALOG_PREVIEW DIALOG 0, 0, 472, 345
+STYLE DS_SETFONT | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "代码预览"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_EDIT_PREVIEW,0,15,220,10,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_EDIT_RESULT,235,15,235,10,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    CONTROL         "",IDC_RICHEDIT_PREVIEW,"RichEdit20W",WS_BORDER | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP | 0xc4,0,30,220,315
+    CONTROL         "",IDC_RICHEDIT_RESULT,"RichEdit20W",WS_BORDER | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP | 0xc4,234,30,237,315
+    GROUPBOX        "",IDC_STATIC_SPLITTER,223,25,8,320
+END
+
+IDD_DIALOG_KILLNOTE DIALOG 0, 0, 464, 239
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "开始操作"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "取消",IDCANCEL,200,45,50,15
+    PUSHBUTTON      "详细内容>>",IDC_BUTTON_DETAIL,410,45,50,15
+    EDITTEXT        IDC_EDIT_SOURFILENAME,55,10,405,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_EDIT_DESFILENAME,55,27,405,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    CONTROL         "List1",IDC_LIST_DETAIL,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,0,70,463,169
+    LTEXT           "源文件:",IDC_STATIC_SOUR,5,10,35,12
+    LTEXT           "目的文件:",IDC_STATIC_DES,4,27,40,12
+    LTEXT           "",IDC_STATIC_SCANTIME,5,45,125,10
+END
+
+IDD_DIALOG_OPTION DIALOG 0, 0, 162, 155
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "选项"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "删除全部注释",IDC_RADIO_KILLALL,"Button",BS_AUTORADIOBUTTON,10,5,70,10
+    CONTROL         "删除部分注释",IDC_RADIO_KILLPART,"Button",BS_AUTORADIOBUTTON,10,20,70,10
+    CONTROL         "保留文件头注释",IDC_CHECK_FILEHEADER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,50,72,10
+    CONTROL         "保留函数头注释",IDC_CHECK_FUNCHEADER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,65,72,10
+    DEFPUSHBUTTON   "确定!",IDOK,50,135,50,14
+    PUSHBUTTON      "取消!",IDCANCEL,106,135,50,14
+    GROUPBOX        "选择保留某些部分的注释",IDC_STATIC_OPTION,5,35,150,90
+    LTEXT           "注意:如果函数头注释是使用""//""开头的多行注释,那么注释杀手只能保留函数所在位置的前一个有效注释,就是只能保留函数前一行的注释内容.",IDC_STATIC_NOTE,15,80,135,35
+END
+
+IDD_DIALOG_FIND DIALOG 0, 0, 244, 69
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "查找"
+FONT 9, "宋体"
+BEGIN
+    COMBOBOX        IDC_COMBO_FIND,50,8,130,57,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "区分大小写",IDC_CHECK_LU,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,33,55,10
+    CONTROL         "全字匹配",IDC_CHECK_ALL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,48,50,10
+    CONTROL         "向上",IDC_RADIO_UP,"Button",BS_AUTORADIOBUTTON,89,43,32,10
+    CONTROL         "向下",IDC_RADIO_DOWN,"Button",BS_AUTORADIOBUTTON,137,43,35,10
+    DEFPUSHBUTTON   "查找",IDC_BUTTON_FIND,187,7,50,14
+    PUSHBUTTON      "关闭",IDCANCEL,187,24,50,14
+    LTEXT           "查找内容:",IDC_STATIC_FINDCONTENT,5,11,40,10
+    GROUPBOX        "方向",IDC_STATIC_DIRECT,80,29,100,30
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x9L
+#else
+ FILEFLAGS 0x8L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "专门删除C/C++代码中的注释"
+            VALUE "FileDescription", "注释杀手"
+            VALUE "FileVersion", "2, 0, 0, 0"
+            VALUE "InternalName", "KillContent.EXE"
+            VALUE "LegalCopyright", "版权所有 (C) 2005年 赵勇,平颖洁合作完成"
+            VALUE "OriginalFilename", "KillContent.EXE"
+            VALUE "PrivateBuild", "注释杀手Alpha2.0版本"
+            VALUE "ProductName", "注释杀手"
+            VALUE "ProductVersion", "Alpha2.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_KILLCONTENT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 465
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 440
+    END
+
+    IDD_DIALOG_FILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 450
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 352
+    END
+
+    IDD_DIALOG_FOLD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 451
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 352
+    END
+
+    IDD_DIALOG_ADD_EDITFILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 300
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 78
+    END
+
+    IDD_DIALOG_PREVIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 465
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 338
+    END
+
+    IDD_DIALOG_KILLNOTE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 457
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_DIALOG_OPTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 155
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 148
+    END
+
+    IDD_DIALOG_FIND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 237
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 62
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_NEW          BITMAP                  "res\\new.bmp"
+IDB_BITMAP_DELETE       BITMAP                  "res\\del.bmp"
+IDR_TOOLBAR_PREVIEW     BITMAP                  "res\\toolbar1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR_PREVIEW TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_BUTTON_CLOSE
+    BUTTON      ID_BUTTON_FIND
+    BUTTON      ID_BUTTON_PREVIEW_ALL
+    BUTTON      ID_BUTTON_PREVIEW_HEAD
+    BUTTON      ID_BUTTON_PREVIEW_FUNC
+    BUTTON      ID_BUTTON_PREVIEW_SAVE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "关于注释杀手(&A)..."
+    IDS_STRING_KILLCONTENT  "注释杀手"
+    IDS_STRING_OPTION       "选项..."
+    IDS_STRING_CLOSE        "关闭"
+    IDS_STRING_PREVIEW      "代码预览"
+    IDS_STRING_SOURFILE     "源文件"
+    IDS_STRING_OPENFAIL     "打开失败!"
+    IDS_STRING_CLEW         "提示"
+    IDS_STRING_FONT_SONG    "宋体"
+    IDS_STRING_KILL_SOURFILE "源文件"
+    IDS_STRING_KILL_DESFILE "目的文件"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING_KILL_CANCEL  "取消"
+    IDS_STRING_KILLDETAIL1  "详细内容>>"
+    IDS_STRING_KILLDETAIL2  "详细内容<<"
+    IDS_STRING_SIZE         "大小"
+    IDS_STRING_STATUS       "状态"
+    IDS_STRING_COSTTIME     "耗时"
+    IDS_STRING_DESFILE      "目的文件"
+    IDS_STRING_SCANFILERESULT "共扫描文件%ld个"
+    IDS_STRING_OUTFILERESULT "共输出文件%ld个"
+    IDS_STRING_SUSPENDTHREADERROR "线程中止异常!"
+    IDS_STRING_PAUSECLEW    "是否中止操作?"
+    IDS_STRING_PAUSE        "中止"
+    IDS_STRING_OPENFILEFAIL "打开失败"
+    IDS_STRING_SCANING      "扫描中"
+    IDS_STRING_OUTFILEFAIL  "输出失败"
+    IDS_STRING_END          "完成"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING_SCANINGSECOND "%ld秒"
+    IDS_STRING_SCANINGTIME  "已经扫描了%02d小时%02d分钟%02d秒"
+    IDS_STRING_BEGINOPERATE "开始操作"
+    IDS_STRING_DESFILE1     "目的文件:"
+    IDS_STRING_OPERATE_FILE "按文件操作"
+    IDS_STRING_OPERATE_FOLD "按目录操作"
+    IDS_STRING_PREVIEWCODE  "预览代码"
+    IDS_STRING_BEGINDELETE  "开始删除"
+    IDS_STRING_CLEWFILE     "请将需要删除注释的文件加入到当前列表框中,选择“开始删除”按钮."
+    IDS_STRING_CLEWFOLD     "请将需要删除注释的目录加入到当前列表框中,选择“开始删除”按钮."
+    IDS_STRING_FILE         "选择需要操作的文件"
+    IDS_STRING_FOLD         "选择需要操作的目录"
+    IDS_STRING_SELECT_SOURFILE "选择源文件:"
+    IDS_STRING_SELECT_DESFILE "选择目的文件:"
+    IDS_STRING_SELECT_SOURFOLD "选择源目录:"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING_SELECT_DESFOLD "选择目的目录:"
+    IDS_STRING_ADD          "添加"
+    IDS_STRING_EDIT         "编辑"
+    IDS_STRING_OK           "确定"
+    IDS_STRING_CANCEL       "取消"
+    IDS_STRING_SELECTFILE   "选择文件"
+    IDS_STRING_SELECTFOLD   "选择目录并按下[确定]按钮"
+    IDS_STRING_INPUTSOURFILE "请输入源文件"
+    IDS_STRING_INPUTDESFILE "请输入目的文件"
+    IDS_STRING_FILESOURISDES "目的文件就是源文件,这样做会覆盖源文件,是否继续?"
+    IDS_STRING_FINDSOURFILEFAIL "源文件%s不存在,请重新选择"
+    IDS_STRING_INPUTSOURFOLD "请输入源目录"
+    IDS_STRING_INPUTDESFOLD "请输入目的目录"
+    IDS_STRING_FOLDSOURISDES "目的目录就是源目录,这样做会覆盖源文件,是否继续?"
+    IDS_STRING_FINDSOURFOLDFAIL "目录%s不存在,请重新选择"
+    IDS_STRING_SAVEFILEFAIL "无法保存文件."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING_FILTER       "C/C++文件(*.c;*.cpp;*.h)|*.c;*.cpp;*.h|"
+    IDS_STRING_MOUSECLEW    "单击鼠标右键进行操作"
+    IDS_STRING_KILLLIST_DELETEFROMLIST "从列表中删除""%s""是否继续?"
+    IDS_STRING_MENUADD      "添加项目(&A)"
+    IDS_STRING_MENUMODIFY   "修改项目(&M)"
+    IDS_STRING_MENUDELETE   "删除项目(&D)"
+    IDS_STRING_MENUPREVIEW  "预览代码(&P)"
+    IDS_STRING_KILLLIST_FILECOLUMN1 "需要删除注释的文件"
+    IDS_STRING_KILLLIST_FILECOLUMN2 "删除注释之后的文件"
+    IDS_STRING_KILLLIST_FOLDCOLUMN1 "需要删除注释的目录"
+    IDS_STRING_KILLLIST_FOLDCOLUMN2 "删除注释之后的目录"
+    IDS_STRING_KILLLIST_INPUTSOURFILE "双击这里选择或者输入源文件名"
+    IDS_STRING_KILLLIST_INPUTDESFILE "双击这里选择或者输入目的文件名"
+    IDS_STRING_KILLLIST_INPUTSOURFOLD "双击这里选择或者输入源目录"
+    IDS_STRING_KILLLIST_INPUTDESFOLD "双击这里选择或者输入目的目录"
+    IDS_STRING_DIALOG_OPTION "选项"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING_OPTION_KILLALL "删除全部注释"
+    IDS_STRING_OPTION_KILLPART "删除部分注释"
+    IDS_STRING_OPTION_SAVECLEW "选择保留某些部分的注释"
+    IDS_STRING_OPTION_SAVEFILEHEADER "保留文件头注释"
+    IDS_STRING_OPTION_SAVEFUNCHEADER "保留函数头注释"
+    IDS_STRING_OPTION_CLEW  "请选择保留哪部分的注释."
+    IDS_STRING_PREVIEW_1    "%s%s%s"
+    IDS_STRING_DEFAULT_EXTENTNAME "*.c;*.cpp;*.h"
+    IDS_STRING_PREVIEW_FIND "查找"
+    IDS_STRING_FINDCONTENT  "查找内容:"
+    IDS_STRING_FINDDIRECT   "方向"
+    IDS_STRING_FIND_LU      "区分大小写"
+    IDS_STRING_ALL          "全字匹配"
+    IDS_STRING_FIND_UP      "向上"
+    IDS_STRING_FIND_DOWN    "向下"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING_KILLNOTE     "注意:如果函数头注释是使用""//""开头的多行注释,那么注释杀手只能保留函数所在位置的前一个有效注释,就是只能保留函数前一行的注释内容."
+END
+
+STRINGTABLE
+BEGIN
+    ID_BUTTON_CLOSE         "关闭"
+    ID_BUTTON_FIND          "查找"
+    ID_BUTTON_PREVIEW_ALL   "删除所有注释"
+    ID_BUTTON_PREVIEW_HEAD  "保留文件头注释"
+    ID_BUTTON_PREVIEW_FUNC  "保留函数头注释"
+    IDS_STRING_OUTPUTFILE   "按照当前方式输出文件"
+    IDS_STRING_FILEOUTFAIL  "文件%s输出失败!该文件可能是只读文件或者注释杀手没有足够的权限向您设定的目录输出目的文件."
+END
+
+#endif    // Chinese (Simplified, PRC) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\KillContent.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

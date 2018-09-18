@@ -1,0 +1,1 @@
+Link-Output-Entry-point symbol:wWinMainCRTStartup

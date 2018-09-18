@@ -1,0 +1,48 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: KillContent - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\y36zhao\AppData\Local\Temp\RSP87F3.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_UNICODE" /D "UNICODE" /D "_AFXDLL" /FR"Debug/" /Fp"Debug/KillContent.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\y36zhao\code\KillContent\GenNotesList.cpp"
+"C:\Users\y36zhao\code\KillContent\PreviewCode.cpp"
+]
+Creating command line "cl.exe @C:\Users\y36zhao\AppData\Local\Temp\RSP87F3.tmp" 
+Creating temporary file "C:\Users\y36zhao\AppData\Local\Temp\RSP87F4.tmp" with contents
+[
+/nologo /entry:"wWinMainCRTStartup" /subsystem:windows /incremental:yes /pdb:"Debug/KillContent.pdb" /debug /machine:I386 /out:"Debug/KillContent.exe" /pdbtype:sept 
+.\Debug\FileAddEdit.obj
+.\Debug\FileDialogEx.obj
+.\Debug\GenNotesList.obj
+.\Debug\KC_File.obj
+.\Debug\KC_Fold.obj
+.\Debug\KFind.obj
+.\Debug\KillContent.obj
+.\Debug\KillContentDlg.obj
+.\Debug\KillListCtrl.obj
+.\Debug\KillOption.obj
+.\Debug\OperateKillNote.obj
+.\Debug\PreviewCode.obj
+.\Debug\StdAfx.obj
+.\Debug\KillContent.res
+]
+Creating command line "link.exe @C:\Users\y36zhao\AppData\Local\Temp\RSP87F4.tmp"
+<h3>Output Window</h3>
+Compiling...
+GenNotesList.cpp
+PreviewCode.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+KillContent.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
